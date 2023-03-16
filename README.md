@@ -45,6 +45,7 @@ await send({
   params: ["0x4707ed426Cb57B30534cb5B73788cA7c3202a51B",184975000000],
   from: "0xdfd5293d8e347dfe59e90efd55b2956a1343963d"
 });
+```
 > Opcional parameters: `value`, `gas` and `gasPrice`.            
 ```javascript
 await send({ to: _contract, call: "function", params: [], from: _from,
