@@ -29,6 +29,22 @@ transferFrom( _address, _from, _to, _amount); // _amount for ERC20, _tokenId for
 safeTransferFrom( _address, _from, _to, _amount); // _amount for ERC20, _tokenId for ERC721
 ```
 
+> Example with ERC20:
+``` javascript
+// Send 184975000000 USDC from `0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48` to `0xdfd5293d8e347dfe59e90efd55b2956a1343963d`
+transfer("0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48", // USDC token
+         "0xdfd5293d8e347dfe59e90efd55b2956a1343963d", // _from address
+         "0x4707ed426Cb57B30534cb5B73788cA7c3202a51B", // _to address
+          184975000000);                               // _amount
+```
+> Example with ERC721:
+``` javascript
+// Send 1 MutantApeYachtClub (MAYC) from `0xD8897A28248a8E5A893Fe94033081f802Ab41495` to `0x7F9E815E8878677478f76E6Bc9B513a8F5A256b7`
+transferFrom("0x60E4d786628Fea6478F785A6d7e704777c86a7c6", // NFT address
+             "0xD8897A28248a8E5A893Fe94033081f802Ab41495", // _from
+             "0x7F9E815E8878677478f76E6Bc9B513a8F5A256b7", // _to
+              9157);                                       // _tokenId
+```
 ## Sending transactions is super easy:
 ```javascript
 await send({ to: _contract_object, call: "nameOfFunctionToCall", params: [], from: _from });
@@ -55,22 +71,6 @@ await send({ to: _contract, call: "function", params: [], from: _from,
             });
 ```
 
-> Example with ERC20:
-``` javascript
-// Send 184975000000 USDC from `0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48` to `0xdfd5293d8e347dfe59e90efd55b2956a1343963d`
-transfer("0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48", // USDC token
-         "0xdfd5293d8e347dfe59e90efd55b2956a1343963d", // _from address
-         "0x4707ed426Cb57B30534cb5B73788cA7c3202a51B", // _to address
-          184975000000);                               // _amount
-```
-> Example with ERC721:
-``` javascript
-// Send 1 MutantApeYachtClub (MAYC) from `0xD8897A28248a8E5A893Fe94033081f802Ab41495` to `0x7F9E815E8878677478f76E6Bc9B513a8F5A256b7`
-transferFrom("0x60E4d786628Fea6478F785A6d7e704777c86a7c6", // NFT address
-             "0xD8897A28248a8E5A893Fe94033081f802Ab41495", // _from
-             "0x7F9E815E8878677478f76E6Bc9B513a8F5A256b7", // _to
-              9157);                                       // _tokenId
-```
 
 ## Initialize (standard) tokens without their ABI:
 
