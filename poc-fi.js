@@ -66,10 +66,3 @@ async function safeTransferFrom(_token_or_nft, _from, _to, _amount_or_id) {
         from: _from,
     });
 }
-
-const _c_ = $contracts["AttackerContract"];
-var factory; var attackerContract;
-if (_c_ != undefined) {
-    factory = new ethers.ContractFactory(_c_.abi, _c_.evm.bytecode, provider.getSigner());
-    attackerContract = await factory.deploy();
-}
