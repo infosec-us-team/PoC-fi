@@ -93,3 +93,8 @@ const RaribleUserToken = erc1155("0x5C6e2892Ed14bD178F0928AbCe94C1373B8265eB");
 const custom_contract = contract("0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48", _abi_object);
 ```
 
+## Helper for BigNumbers in Javascript
+> No need to call `ethers.utils.parseUnits` anymore. Use `bigNumber("111111111111111")` to initialize a big number.
+```javascript
+bigNumber("5000000000")
+```
